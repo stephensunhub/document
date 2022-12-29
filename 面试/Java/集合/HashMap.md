@@ -1,7 +1,3 @@
----
-typora-root-url: ../../../assets
----
-
 # HashMap底层实现原理
 
 - 数据结构: 数组 + 链表(1.8红黑树)
@@ -29,8 +25,7 @@ typora-root-url: ../../../assets
 
 # HashMap扩容
 
-![img](20200618150149962.png)
-
+![img](../../../assets/20200618150149962.png)
 # 为什么HashMap的底层数组长度为何总是2的n次方
 
 HashMap根据用户传入的初始化容量，利用无符号右移和按位或运算等方式计算出第一个大于该数的2的幂。
@@ -41,9 +36,9 @@ HashMap根据用户传入的初始化容量，利用无符号右移和按位或�
 
 我们来举例当length为奇数、偶数时的情况：
 
-![](20200618150805100.png)
+![img](../../../assets/20200618150805100.png)
 
-![img](/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MTQxNzcz,size_16,color_FFFFFF,t_70-20221229104123242.png)
+![img](../../../assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MTQxNzcz,size_16,color_FFFFFF,t_70-20221229104123242.png)
 
 从上面的图表中我们可以看到，当 length 为15时总共发生了8次碰撞，同时发现空间浪费非常大，因为在 1、3、5、7、9、11、13、15 这八处没有存放数据。
 
