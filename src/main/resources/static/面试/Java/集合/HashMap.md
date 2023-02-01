@@ -45,7 +45,7 @@ HashMap根据用户传入的初始化容量，利用无符号右移和按位或�
 
 Jdk1.7
 
-```
+```java
 void resize(int newCapacity) {   //传入新的容量
     Entry[] oldTable = table;    //引用扩容前的Entry数组
     int oldCapacity = oldTable.length;         
@@ -61,7 +61,7 @@ void resize(int newCapacity) {   //传入新的容量
 }
 ```
 
-```
+```java
 void transfer(Entry[] newTable) {
     Entry[] src = table;                   //src引用了旧的Entry数组
     int newCapacity = newTable.length;
